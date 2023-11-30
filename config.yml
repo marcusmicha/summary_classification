@@ -1,0 +1,12 @@
+fine_tuning: False
+score_matrix_path: 'score_matrix.txt'
+embeddings_model: "all-MiniLM-L6-v2"
+summarizer_model: 
+  name: "philschmid/flan-t5-base-samsum"
+  prefix: "summarize: "
+  max_input_length: 3300 # from EDA
+  max_output_length: 300 # from EDA
+score_details:
+  type: "rouge1" # can be rouge1, rouge2 or cosine_similarity
+  specific_metric: "precision" # in case of rouge attaching strategy, chose among recall, precision or fmeasure
+final_file_path: "result/final_df.csv"
